@@ -7,9 +7,7 @@ public class Saluda {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Scanner entrada = new Scanner (System.in);
-		System.out.println("¿Como te llamas?");
-		_nombre = entrada.nextLine();
+		_nombre = pideNombre();
 		System.out.println("Un saludo "+getNombre());
 		setNombre ("NO SE");
 		System.out.println("He cambiado el nombre a "+getNombre());
@@ -22,6 +20,13 @@ public class Saluda {
 	
 	public static void setNombre (String nombre) {
 		_nombre = nombre;
+	}
+	
+	public static String pideNombre () {
+		Scanner entrada = new Scanner (System.in);
+		System.out.println("¿Como te llamas?");
+		String nombre = entrada.nextLine();
+		return nombre;
 	}
 
 }
